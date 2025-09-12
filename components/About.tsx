@@ -18,7 +18,7 @@ const About = () => {
           <div className="card">
             <h3>Our Vision</h3>
             <p>
-              &quot;To be the leading and preferred technology solutions provider in Africa, as adjudged by our customers and stakeholders, by the year 2030."&quot;
+              &quot;To be the leading and preferred technology solutions provider in Africa, as adjudged by our customers and stakeholders, by the year 2030.&quot;
             </p>
           </div>
         </div>
