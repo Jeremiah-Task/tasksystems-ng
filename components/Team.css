@@ -13,6 +13,7 @@
   text-align: center;
   margin-bottom: 2rem;
   color: #343a40;
+  font-size: 1.8rem;
 }
 
 .team-grid {
@@ -28,14 +29,14 @@
   background: #fff;
   border-radius: 12px;
   text-align: center;
-  flex: 1 1 250px;   /* default ~250px wide */
+  flex: 1 1 250px; 
   max-width: 250px;
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  border: 1px solid #dee2e6;
+  border: 1px solid #fc0;
 }
 
 .profile-img {
@@ -62,7 +63,6 @@
   font-size: 1rem;
 }
 
-/* Medium screens */
 @media (max-width: 767px) {
   .team-grid {
     gap: 1rem;
@@ -77,10 +77,9 @@
   }
 }
 
-/* Mobile: force 2 per row, max 150px each */
 @media (max-width: 500px) {
   .profile-card {
-    flex: 1 1 45%;   /* about 2 per row */
+    flex: 1 1 45%;  
     max-width: 150px;
     height: 300px;
   }

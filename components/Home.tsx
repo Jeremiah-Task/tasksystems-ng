@@ -8,7 +8,7 @@ import "./Home.css";
 const Home = () => {
   const slides = [
     "Where Innovation Knows No Bounds.",
-    "...driving the Future Today.",
+    "Driving the Future Today.",
     "Contact us to learn more.",
   ];
   const text = useTypingEffect(slides);

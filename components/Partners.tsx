@@ -43,7 +43,6 @@ const Partners = () => {
               <p>{partner.name}</p>
             </div>
           ))}
-          {/* Duplicate for seamless looping */}
           {partners.map((partner, index) => (
             <div key={index + partners.length} className="partner">
               <Image src={partner.logo} alt={partner.name} width={150} height={100} />
