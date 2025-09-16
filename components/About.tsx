@@ -1,55 +1,92 @@
-import React from "react";
+"use client";
 
-const About = () => {
+import React from "react";
+import Image from "next/image";
+import { FaShieldAlt, FaLaptopCode, FaUsers, FaExclamationTriangle } from "react-icons/fa";
+import "./About.css";
+
+const features = [
+  {
+    icon: <FaUsers />,
+    title: "Highly Professional Members",
+    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: "Infrastructure Integration Technology",
+    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: "Vulnerability Assessment & Penetration Testing",
+    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+  },
+  {
+    icon: <FaExclamationTriangle />,
+    title: "Security Information & Event Management",
+    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+  },
+];
+
+const AboutSection = () => {
   return (
-    <div id="about" className="section about">
-      <div className="about-content container">
-        <h2>About Us</h2>
-        <p>
-          Founded in 1987, Task Systems Ltd has evolved from a pioneering IT firm into one of Africa’s foremost System Integrators, driving digital transformation, intelligent automation, and AI-powered innovation across the continent. With nearly four decades of unwavering excellence, Task has become a trusted name in delivering impactful, scalable, and future-ready technology solutions to businesses across multiple sectors.
-        </p>
-        <div className="mission-vision-cards">
-          <div className="card">
-            <h3>Our Mission</h3>
-            <p>
-              &quot;To sustain a best-in-class technology solutions company that anticipates the future and delivers value to our customers through a highly motivated and professional team.&quot;
-            </p>
+    <section className="about-section">
+      <div className="about-container">
+        {/* Left Column */}
+        <div className="about-images">
+          <div className="about-heading">
+            <p className="section-label">About Paheli</p>
+            <h2 className="about-title">
+              The Virtual Realm: An Expansive Guide to Cybersecurity.
+            </h2>
           </div>
-          <div className="card">
-            <h3>Our Vision</h3>
-            <p>
-              &quot;To be the leading and preferred technology solutions provider in Africa, as adjudged by our customers and stakeholders, by the year 2030.&quot;
-            </p>
+
+          <div className="main-image">
+            <Image
+              src="/contact.png"
+              alt="Main security"
+              fill
+              style={{ objectFit: "cover", borderRadius: "0 10px 0 10px" }}
+            />
+          </div>
+
+          <div className="small-image">
+            <Image src="/contact.png" alt="Small image 1" fill />
+          </div>
+
+          <div className="small-image-circle">
+            <Image src="/contact.png" alt="Small image 2" fill />
           </div>
         </div>
-        <div className="core-values-card card">
-          <h3>Our Core Values</h3>
-          <div className="mini-cards-grid">
-            <div className="mini-card">
-              <h4>Professionalism</h4>
-              <p>In our staff, in our procedures and processes, and in our services.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Responsiveness</h4>
-              <p>To any and all factors that can affect our clients’ business productivity.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Integrity</h4>
-              <p>We act honestly and ethically, taking responsibility in order to earn the trust of our clients.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Dynamism</h4>
-              <p>To deliver the best value each time, adapting swiftly to changing needs.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Excellence</h4>
-              <p>To consistently stand out from the competition.</p>
-            </div>
+
+        {/* Right Column */}
+        <div className="about-text">
+          <p className="about-description">
+            Organizations are now compelled to complete comprehensive cybersecurity
+            strategies to safeguard their systems, networks, and data...
+          </p>
+
+          <div className="features-list">
+            {features.map((feature, index) => (
+              <div key={index} className="feature-item">
+                <div className="feature-icon-wrapper">
+                  <div className="feature-icon">{feature.icon}</div>
+                </div>
+                <div>
+                  <h4>{feature.title}</h4>
+                  <p>{feature.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
+
+          <a href="#contact" className="cta-button">
+            Know More About
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default About;
+export default AboutSection;

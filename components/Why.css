@@ -1,0 +1,135 @@
+.whyChoose {
+  background: #f7f9fc;
+  padding: 80px 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.whyWrapper {
+  display: flex;
+  align-items: stretch; /* 🔑 makes both columns equal height */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.whyText {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #ff6600;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.tagline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 5px 12px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  background-color: #dddfff;
+  border-radius: 20px;
+  width: max-content;
+}
+
+.checkIcon {
+  color: purple; /* 🔑 make it purple */
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* CTA button */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  width: max-content;
+}
+
+.cta:hover {
+  background: #1d4ed8;
+}
+
+.ctaIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; /* white bg circle */
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+.ctaIcon {
+  color: #2563eb; /* same as button background */
+  font-size: 10px;
+}
+
+/* Right side images */
+.whyImages {
+  flex: 1;
+  display: flex;
+}
+
+.imgContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%; /* 🔑 match parent height (same as text block) */
+}
+
+.imgContainer .img {
+  width: 50%; /* each image = half */
+  height: 100%; /* take full container height */
+  object-fit: cover; /* prevent distortion */
+  padding: 0 10px;
+}
+
+.imgContainer .img:first-of-type {
+  border-radius: 0 120px 0 120px;
+}
+
+.imgContainer .img:nth-of-type(2) {
+  border-radius: 120px 0 120px 0;
+}
+
+.circleOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%; /* 40% of one image’s width */
+  aspect-ratio: 1 / 1; /* 🔑 keep width = height */
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* 🔑 make it round */
+  border: 10px solid #f7f9fc; /* match section background */
+  object-fit: cover; /* image fills the circle */
+}

@@ -1,13 +1,14 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: center; /* push content to right */
+  text-align: left;         /* align text inside to right */
   color: white;
   overflow: hidden;
+  padding-left: 1rem;       /* breathing space */
 }
 
 .hero-image {
@@ -33,7 +34,7 @@
 .hero-text-container {
   max-width: 800px;
   padding: 20px;
-  text-align: left;
+  text-align: left;         /* ensure headings/desc/buttons align right */
 }
 
 .cyber-hygiene {

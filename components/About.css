@@ -1,0 +1,100 @@
+.about-container {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Left Column */
+.about-images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-heading {
+  margin-bottom: 1rem;
+}
+
+.about-heading .section-label {
+  color: #ff6600;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.about-heading .about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Main Image */
+.main-image {
+  position: relative;
+  width: 100%;
+  height: 60%; /* 60% of container height */
+  min-height: 350px;
+}
+
+.main-image {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 10px 0 10px; /* flat TL & BR */
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Small Image 1 */
+.small-image {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  width: 180px;
+  height: 140px;
+  border-radius: 0 10px 0 10px; /* flat TL & BR */
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.small-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Small Image 2 (circle overlap) */
+.small-image-circle {
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.small-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Column */
+.about-text {
+  text-align: left;
+}
+
+.about-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}

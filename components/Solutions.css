@@ -1,54 +1,67 @@
 .solutions {
-  padding: 80px 20px;
-  background: #f8f9fa;
-  text-align: center;
-}
-
-.solutions h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-top: -8rem; /* overlap into hero */
+  position: relative;
+  z-index: 5;
+  background: transparent; /* section itself transparent */
 }
 
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 2rem;
 }
+
 
 .solution-card {
-  background: #fff;
-  border: 1px solid #fc0;
-  border-radius: 10px;
-  padding: 1.5rem;
+  background: #fff; /* keep cards white */
+  border-radius: 0 16px 0 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   text-align: left;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s ease;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.solution-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+.solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
+.solution-number {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background: #f5f6fb;
+  color: #6a6fcf;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  border: 1px solid #e5e6ef;
+}
 
 .solution-card h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
-  color: #333;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
 }
 
 .solution-card p {
+  margin: 0.75rem 0 1.5rem;
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
 }
 
-.solution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background: #fffceb;
+.read-more {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.read-more:hover {
+  text-decoration: underline;
 }

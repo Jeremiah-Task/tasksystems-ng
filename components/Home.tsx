@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div id="home" className="section hero">
       <Image
-        src="/images/placeholder1.png"
+        src="/contact.png"
         alt="Hero Image"
         fill
         className="hero-image"
@@ -16,8 +16,8 @@ const Home = () => {
       />
       <div className="hero-overlay"></div>
 
-      <div className="hero-text-container">
-        <div className="hero-text">
+      <div className="container">
+        <div className="hero-text-container">
           <p className="cyber-hygiene">Cyber Hygiene:</p>
           <h1>A Proactive Approach to Digital Security.</h1>
           <p className="description">
@@ -26,16 +26,13 @@ const Home = () => {
             landscape...
           </p>
           <div className="hero-buttons">
-            <button className="btn-request-demo">
-              Request A Demo
-            </button>
-            <button className="btn-watch-video">
-              Watch Intro Video
-            </button>
+            <button className="btn-request-demo">Request A Demo</button>
+            <button className="btn-watch-video">Watch Intro Video</button>
           </div>
         </div>
       </div>
     </div>
+
   );
 };
 
