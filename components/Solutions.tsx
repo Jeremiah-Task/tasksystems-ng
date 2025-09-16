@@ -1,6 +1,7 @@
 "use client";
-
+import React, { useEffect } from "react";
 import "./Solutions.css";
+import { useInView } from "react-intersection-observer";
 
 const solutions = [
   {
@@ -23,36 +24,25 @@ const solutions = [
     details:
       "Video conferencing, unified comms, and collaboration platforms to connect distributed teams.",
   },
-  {
-    name: "Security Solutions",
-    details:
-      "Cybersecurity including endpoint protection, threat detection, and compliance management.",
-  },
-  {
-    name: "Enterprise Applications",
-    details:
-      "Custom apps to optimize processes, improve efficiency, and drive digital transformation.",
-  },
-  {
-    name: "Managed Support",
-    details:
-      "24/7 monitoring, maintenance, and proactive support to ensure optimal performance.",
-  },
-  {
-    name: "Cloud Solutions",
-    details:
-      "Scalable infrastructure, migration, and cloud-native services for flexibility and continuity.",
-  },
 ];
 
 const Solutions = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <div id="solutions" className="section solutions">
+    <div id="solutions" className="section solutions" ref={ref}>
       <div className="container">
         <h2>Our Solutions</h2>
         <div className="solutions-grid">
-          {solutions.map((solution) => (
-            <div key={solution.name} className="solution-card">
+          {solutions.slice(0, 4).map((solution, index) => (
+            <div
+              key={solution.name}
+              className={`solution-card ${inView ? "visible" : ""}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
               <h3>{solution.name}</h3>
               <p>{solution.details}</p>
             </div>

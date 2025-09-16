@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { FaArrowRight, FaPlayCircle } from "react-icons/fa6";
 import "./Home.css";
 
 const Home = () => {
@@ -28,10 +27,10 @@ const Home = () => {
           </p>
           <div className="hero-buttons">
             <button className="btn-request-demo">
-              Request A Demo <FaArrowRight />
+              Request A Demo
             </button>
             <button className="btn-watch-video">
-              <FaPlayCircle /> Watch Intro Video
+              Watch Intro Video
             </button>
           </div>
         </div>
