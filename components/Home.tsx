@@ -2,17 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTypingEffect } from "@/hooks/useTypingEffect";
+import { FaArrowRight, FaPlayCircle } from "react-icons/fa6";
 import "./Home.css";
 
 const Home = () => {
-  const slides = [
-    "Where Innovation Knows No Bounds.",
-    "Driving the Future Today.",
-    "Contact us to learn more.",
-  ];
-  const text = useTypingEffect(slides);
-
   return (
     <div id="home" className="section hero">
       <Image
@@ -26,10 +19,21 @@ const Home = () => {
 
       <div className="hero-text-container">
         <div className="hero-text">
-          <h1>
-            {text}
-            <span className="typing-cursor"></span>
-          </h1>
+          <p className="cyber-hygiene">Cyber Hygiene:</p>
+          <h1>A Proactive Approach to Digital Security.</h1>
+          <p className="description">
+            In today's increasingly digital world, cybersecurity has become
+            paramount. With the rapid expansion of online activities, the threat
+            landscape...
+          </p>
+          <div className="hero-buttons">
+            <button className="btn-request-demo">
+              Request A Demo <FaArrowRight />
+            </button>
+            <button className="btn-watch-video">
+              <FaPlayCircle /> Watch Intro Video
+            </button>
+          </div>
         </div>
       </div>
     </div>
