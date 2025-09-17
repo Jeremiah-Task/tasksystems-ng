@@ -35,7 +35,7 @@ const AboutSection = () => {
         {/* Left Column */}
         <div className="about-images">
           <div className="about-heading">
-            <p className="section-label">About Paheli</p>
+            <p className="section-label">About Task</p>
             <h2 className="about-title">
               {`The Digital Frontier: Powering Nigeria’s ICT Evolution`}
             </h2>
@@ -43,7 +43,7 @@ const AboutSection = () => {
 
           <div className="main-image">
             <Image
-              src="/contact.png"
+              src="/main-image.png"
               alt="Main security"
               fill
               style={{ objectFit: "cover", borderRadius: "0 10px 0 10px" }}
@@ -51,11 +51,11 @@ const AboutSection = () => {
           </div>
 
           <div className="small-image">
-            <Image src="/contact.png" alt="Small image 1" fill />
+            <Image src="/long-term-partnership.jpg" alt="Small image 1" fill />
           </div>
 
           <div className="small-image-circle">
-            <Image src="/contact.png" alt="Small image 2" fill />
+            <Image src="/small-image.png" alt="Small image 2" fill />
           </div>
         </div>
 

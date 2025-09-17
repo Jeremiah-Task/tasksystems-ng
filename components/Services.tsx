@@ -7,27 +7,27 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const services = [
   {
-    img: "/contact.png",
+    img: "/infrastructure.jpg",
     title: "Enterprise Infrastructure",
     desc: "Designing and implementing scalable servers, storage, and network solutions for businesses.",
   },
   {
-    img: "/contact.png",
+    img: "/cloud.jpg",
     title: "Cloud Solutions",
     desc: "Delivering cloud enablement and migration services to improve agility and efficiency.",
   },
   {
-    img: "/contact.png",
+    img: "/cybersecurity.jpg",
     title: "Cybersecurity & Risk Management",
     desc: "Protecting systems, networks, and data through comprehensive security strategies and assessments.",
   },
   {
-    img: "/contact.png",
+    img: "/itsupport.jpg",
     title: "Managed IT Support",
     desc: "Providing helpdesk, maintenance, and IT outsourcing services to ensure business continuity.",
   },
   {
-    img: "/contact.png",
+    img: "/security.jpg",
     title: "Power & Security Systems",
     desc: "Ensuring uninterrupted operations with backup power, access control, and surveillance solutions.",
   },

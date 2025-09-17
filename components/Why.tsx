@@ -49,9 +49,9 @@ export default function Why() {
                 {/* Right side: images */}
                 <div className="whyImages">
                     <div className="imgContainer">
-                        <Image src="/contact.png" className="img" alt="Image 1" width={300} height={200} />
-                        <Image src="/contact.png" className="img" alt="Image 2" width={300} height={200} />
-                        <Image src="/contact.png" alt="Circle" className="circleOverlay" width={100} height={100} />
+                        <Image src="/left-image.png" className="img" alt="Image 1" width={300} height={200} />
+                        <Image src="/right-image.png" className="img" alt="Image 2" width={300} height={200} />
+                        <Image src="/center-image.png" alt="Circle" className="circleOverlay" width={100} height={100} />
                     </div>
                 </div>
             </div>
