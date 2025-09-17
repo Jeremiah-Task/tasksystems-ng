@@ -1,60 +1,39 @@
 "use client";
-
+import React from "react";
 import "./Solutions.css";
+import { useInView } from "react-intersection-observer";
+import { FiArrowUpRight } from "react-icons/fi"; // arrow icon
 
 const solutions = [
-  {
-    name: "Network Solutions",
-    details:
-      "Robust, scalable, and secure connectivity infrastructure tailored to meet your organization's specific requirements.",
-  },
-  {
-    name: "Enterprise Mobility",
-    details:
-      "Secure device management and app deployment that enhances productivity while maintaining compliance.",
-  },
-  {
-    name: "Convergence Solutions",
-    details:
-      "Unify voice, video, and data communications into streamlined platforms that reduce complexity.",
-  },
-  {
-    name: "Collaboration Solutions",
-    details:
-      "Video conferencing, unified comms, and collaboration platforms to connect distributed teams.",
-  },
-  {
-    name: "Security Solutions",
-    details:
-      "Cybersecurity including endpoint protection, threat detection, and compliance management.",
-  },
-  {
-    name: "Enterprise Applications",
-    details:
-      "Custom apps to optimize processes, improve efficiency, and drive digital transformation.",
-  },
-  {
-    name: "Managed Support",
-    details:
-      "24/7 monitoring, maintenance, and proactive support to ensure optimal performance.",
-  },
-  {
-    name: "Cloud Solutions",
-    details:
-      "Scalable infrastructure, migration, and cloud-native services for flexibility and continuity.",
-  },
+  { name: "Enterprise Infrastructure & Cloud", details: "Building scalable systems with reliable servers, storage, and cloud solutions." },
+  { name: "Cybersecurity & Data Protection", details: "Protecting businesses with secure, compliant, and resilient IT systems." },
+  { name: "Managed IT Support", details: "Delivering responsive support and maintenance to keep operations running smoothly." },
+  { name: "Power & Security Systems", details: "Ensuring business continuity with stable power and advanced security solutions." },
+
 ];
 
 const Solutions = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
   return (
-    <div id="solutions" className="section solutions">
+    <div id="solutions" className="solutions" ref={ref}>
       <div className="container">
-        <h2>Our Solutions</h2>
         <div className="solutions-grid">
-          {solutions.map((solution) => (
-            <div key={solution.name} className="solution-card">
+          {solutions.map((solution, index) => (
+            <div
+              key={solution.name}
+              className={`solution-card ${inView ? "visible" : ""}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
+              <div className="solution-number">
+                {String(index + 1).padStart(2, "0")}
+              </div>
               <h3>{solution.name}</h3>
               <p>{solution.details}</p>
+              <a href="#services" className="read-more">
+                <span className="read-text">More Solutions</span>
+                <FiArrowUpRight className="read-arrow" />
+              </a>
             </div>
           ))}
         </div>

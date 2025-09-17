@@ -2,21 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTypingEffect } from "@/hooks/useTypingEffect";
 import "./Home.css";
 
 const Home = () => {
-  const slides = [
-    "Where Innovation Knows No Bounds.",
-    "Driving the Future Today.",
-    "Contact us to learn more.",
-  ];
-  const text = useTypingEffect(slides);
-
   return (
     <div id="home" className="section hero">
       <Image
-        src="/images/placeholder1.png"
+        src="/contact.png"
         alt="Hero Image"
         fill
         className="hero-image"
@@ -24,15 +16,24 @@ const Home = () => {
       />
       <div className="hero-overlay"></div>
 
-      <div className="hero-text-container">
-        <div className="hero-text">
-          <h1>
-            {text}
-            <span className="typing-cursor"></span>
-          </h1>
+      <div className="container">
+        <div className="hero-text-container">
+          <p className="cyber-hygiene">Task Systems Limited</p>
+          <h1>Innovative IT Solutions for Your Business</h1>
+          <p className="description">
+            In today&apos;s increasingly digital world, cybersecurity has become
+            paramount. With the rapid expansion of online activities, the threat
+            landscape...
+          </p>
+          <div className="hero-buttons">
+            <button className="btn-request-demo">
+              <span className="btn-circle"></span>About Us</button>
+            <button className="btn-watch-video">Our Services</button>
+          </div>
         </div>
       </div>
     </div>
+
   );
 };
 

@@ -2,21 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.1rem 2rem;
   background: #f8f9fa;
   color: #000;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #fc0;
 }
-
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 
 .navbar-container {
   max-width: 1200px;
@@ -27,32 +20,49 @@
   align-items: center;
 }
 
-.navbar a:hover {
-  color: #0056b3;
-}
-
 .navbar a {
-  color: #007bff;
   padding: 0 1rem;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   transition: color 0.3s ease;
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1rem; /* restore comfortable spacing */
 }
 
 .nav-links a {
+  position: relative;
   color: #000;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   transition: color 0.3s ease;
+  padding: 0.3rem 0; /* vertical padding only */
+  display: inline-block; /* helps with ::after sizing */
+}
+
+/* underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #e88504;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-links a:hover {
-  color: #fc2;
+  color: #e88504;
 }
 
 .hamburger {

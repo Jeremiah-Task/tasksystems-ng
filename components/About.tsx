@@ -1,55 +1,91 @@
-import React from "react";
+"use client";
 
-const About = () => {
+import React from "react";
+import Image from "next/image";
+import { FaShieldAlt, FaLaptopCode, FaUsers, FaExclamationTriangle } from "react-icons/fa";
+import "./About.css";
+
+const features = [
+  {
+    icon: <FaUsers />,
+    title: "Proven Expertise & Experience",
+    desc: "Task Systems has over three decades of experience delivering ICT solutions to leading businesses across Nigeria.",
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: "Infrastructure & Cloud Integration",
+    desc: "We design and implement scalable infrastructure and cloud solutions that optimize business operations and technology adoption.",
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: "Cybersecurity & Risk Management",
+    desc: "We protect critical systems and data through comprehensive cybersecurity strategies, vulnerability assessments, and penetration testing.",
+  },
+  {
+    icon: <FaExclamationTriangle />,
+    title: "Managed IT & Compliance Services",
+    desc: "Our managed IT services, security monitoring, and compliance support ensure operational continuity and adherence to global standards.",
+  },
+];
+
+const AboutSection = () => {
   return (
-    <div id="about" className="section about">
-      <div className="about-content container">
-        <h2>About Us</h2>
-        <p>
-          Founded in 1987, Task Systems Ltd has evolved from a pioneering IT firm into one of Africa’s foremost System Integrators, driving digital transformation, intelligent automation, and AI-powered innovation across the continent. With nearly four decades of unwavering excellence, Task has become a trusted name in delivering impactful, scalable, and future-ready technology solutions to businesses across multiple sectors.
-        </p>
-        <div className="mission-vision-cards">
-          <div className="card">
-            <h3>Our Mission</h3>
-            <p>
-              &quot;To sustain a best-in-class technology solutions company that anticipates the future and delivers value to our customers through a highly motivated and professional team.&quot;
-            </p>
+    <section id="about" className="about-section">
+      <div className="about-container">
+        {/* Left Column */}
+        <div className="about-images">
+          <div className="about-heading">
+            <p className="section-label">About Task</p>
+            <h2 className="about-title">
+              {`The Digital Frontier: Powering Nigeria’s ICT Evolution`}
+            </h2>
           </div>
-          <div className="card">
-            <h3>Our Vision</h3>
-            <p>
-              &quot;To be the leading and preferred technology solutions provider in Africa, as adjudged by our customers and stakeholders, by the year 2030.&quot;
-            </p>
+
+          <div className="main-image">
+            <Image
+              src="/main-image.png"
+              alt="Main security"
+              fill
+              style={{ objectFit: "cover", borderRadius: "0 10px 0 10px" }}
+            />
+          </div>
+
+          <div className="small-image">
+            <Image src="/long-term-partnership.jpg" alt="Small image 1" fill />
+          </div>
+
+          <div className="small-image-circle">
+            <Image src="/small-image.png" alt="Small image 2" fill />
           </div>
         </div>
-        <div className="core-values-card card">
-          <h3>Our Core Values</h3>
-          <div className="mini-cards-grid">
-            <div className="mini-card">
-              <h4>Professionalism</h4>
-              <p>In our staff, in our procedures and processes, and in our services.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Responsiveness</h4>
-              <p>To any and all factors that can affect our clients’ business productivity.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Integrity</h4>
-              <p>We act honestly and ethically, taking responsibility in order to earn the trust of our clients.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Dynamism</h4>
-              <p>To deliver the best value each time, adapting swiftly to changing needs.</p>
-            </div>
-            <div className="mini-card">
-              <h4>Excellence</h4>
-              <p>To consistently stand out from the competition.</p>
-            </div>
+
+        {/* Right Column */}
+        <div className="about-text">
+          <p className="about-description">
+            {`In today’s fast-paced digital landscape, organizations rely on Task Systems Limited to deliver secure, reliable, and scalable ICT solutions. From infrastructure and cloud services to cybersecurity and managed support, we help businesses protect their systems, networks, and data while staying ahead of technology trends.`}
+          </p>
+
+          <div className="features-list">
+            {features.map((feature, index) => (
+              <div key={index} className="feature-item">
+                <div className="feature-icon-wrapper">
+                  <div className="feature-icon">{feature.icon}</div>
+                </div>
+                <div>
+                  <h4>{feature.title}</h4>
+                  <p>{feature.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
+
+          <a href="#contact" className="cta-button">
+            Contact Us
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default About;
+export default AboutSection;

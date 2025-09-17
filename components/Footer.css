@@ -1,47 +1,249 @@
 .footer {
-  background: #e9ecef;
-  color: #212529;
-  padding: 2rem 0;
+  background-color: #e88504;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-.footer-content {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top row: Call + Newsletter */
+.topRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 1rem;
+  margin-bottom: 40px;
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Contact section */
+.contactSection {
+  display: flex;
+  align-items: center; /* align icon with text */
+  gap: 15px; /* spacing between text and icon */
 }
 
-.footer-links a {
-  color: #212529;
-  margin: 0 10px;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.contactText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-links a:hover {
-  color: #fc0;
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  color: #e88504;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.go-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  background: #fc0;
-  color: #000;
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.phoneNumber {
+  font-size: 18px;
+}
+
+/* Newsletter section */
+.newsletterSection {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between title and input */
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.newsletterSection .sectionTitle {
+  margin: 0; /* remove extra bottom margin */
+}
+
+.newsletterInputWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 30px 10px;
+  border-radius: 6px;
   border: none;
-  padding: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  z-index: 1000;
+  font-size: 16px;
 }
 
-.go-to-top:hover {
-  background: #fa0;
+.newsletterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* space between text & icon */
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  height: 80%;
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px;
+  font-weight: 600;
+  background: linear-gradient(to right, #fabb0c, #e88504);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletterBtn:hover {
+  background: linear-gradient(to right, #e88504, #fabb0c);
+}
+
+.iconCircleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #e88504;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255,255,255,0.3);
+  margin: 30px 0;
+}
+
+/* Footer content grid */
+/* Footer content grid - now 3 equal sections */
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Contact info spacing */
+.contactInfo p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer sections */
+.footerSection h3,
+.footerSection h4 {
+  color: white;
+}
+
+.footerSection h3 {
+  margin-bottom: 15px;
+}
+
+.footer-description,
+.contactInfo,
+.linkList li a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Quick Links - remove bullets */
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li a {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.linkList li {
+  margin-bottom: 10px;
+}
+
+.linkList li a:hover {
+  color: #fff;
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+@media (max-width: 768px) {
+  .topRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .newsletterSection {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .newsletterSection .sectionTitle {
+    font-size: 16px;
+  }
+
+  .newsletterInputWrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .emailInput {
+    padding: 30px 10px;
+    font-size: 14px;
+  }
+
+  .newsletterBtn {
+    top: 5px;
+    right: 5px;
+    height: calc(100% - 10px);
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footerSection {
+    text-align: left;
+  }
+
+  .footerSection h3,
+  .footerSection h4 {
+    font-size: 16px;
+  }
+
+  .footer-description,
+  .contactInfo,
+  .linkList li a{
+    font-size: 14px;
+  }
+
+  .phoneNumber {
+    font-size: 15px;
+  }
 }
