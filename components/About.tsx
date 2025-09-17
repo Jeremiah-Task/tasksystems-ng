@@ -30,7 +30,7 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="about-container">
         {/* Left Column */}
         <div className="about-images">

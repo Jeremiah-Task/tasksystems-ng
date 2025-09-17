@@ -104,3 +104,8 @@
   color: #e88504;
 }
 
+@media (max-width: 767px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}

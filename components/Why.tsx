@@ -1,12 +1,12 @@
-// app/page.tsx (or pages/index.tsx)
 import React from "react";
+import Image from "next/image";
 import "./Why.css";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function Why() {
     return (
-        <section className="whyChoose">
+        <section id="why" className="whyChoose">
             <div className="whyWrapper">
                 {/* Left side: text */}
                 <div className="whyText">
@@ -49,9 +49,9 @@ export default function Why() {
                 {/* Right side: images */}
                 <div className="whyImages">
                     <div className="imgContainer">
-                        <img src="/contact.png" className="img" alt="Image 1" />
-                        <img src="/contact.png" className="img" alt="Image 2" />
-                        <img src="/contact.png" alt="Circle" className="circleOverlay" />
+                        <Image src="/contact.png" className="img" alt="Image 1" width={300} height={200} />
+                        <Image src="/contact.png" className="img" alt="Image 2" width={300} height={200} />
+                        <Image src="/contact.png" alt="Circle" className="circleOverlay" width={100} height={100} />
                     </div>
                 </div>
             </div>

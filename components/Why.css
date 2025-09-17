@@ -148,3 +148,24 @@
   border: 10px solid #f7f9fc; /* match section background */
   object-fit: cover; /* image fills the circle */
 }
+
+@media (max-width: 767px) {
+  .whyWrapper {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgContainer .img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .circleOverlay {
+    display: none;
+  }
+}

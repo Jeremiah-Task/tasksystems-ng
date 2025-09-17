@@ -21,7 +21,7 @@ const Home = () => {
           <p className="cyber-hygiene">Task Systems Limited</p>
           <h1>Innovative IT Solutions for Your Business</h1>
           <p className="description">
-            In today's increasingly digital world, cybersecurity has become
+            In today&apos;s increasingly digital world, cybersecurity has become
             paramount. With the rapid expansion of online activities, the threat
             landscape...
           </p>

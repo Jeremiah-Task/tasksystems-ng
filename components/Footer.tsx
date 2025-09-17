@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="footerSection">
             <h3 className="brandName">Pahell</h3>
             <p className="footer-description">
-              Cybersecurity is crucial in today's digital age, where many individuals
+              Cybersecurity is crucial in today&apos;s digital age, where many individuals
               and organizations store a significant amount of sensitive data on computers...
             </p>
           </div>

@@ -211,3 +211,25 @@
 .cta-button:hover span {
   background: #fabb0c;
 }
+
+@media (max-width: 767px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images {
+    order: 2;
+  }
+
+  .about-text {
+    order: 1;
+  }
+
+  .small-image, .small-image-circle {
+    display: none;
+  }
+
+  .main-image {
+    width: 100%;
+  }
+}
