@@ -27,11 +27,6 @@ const services = [
     desc: "Protecting systems, networks, and data through comprehensive security strategies and assessments.",
   },
   {
-    img: "/itsupport.jpg",
-    title: "Managed IT Support",
-    desc: "Providing helpdesk, maintenance, and IT outsourcing services to ensure business continuity.",
-  },
-  {
     img: "/security.jpg",
     title: "Power & Security Systems",
     desc: "Ensuring uninterrupted operations with backup power, access control, and surveillance solutions.",

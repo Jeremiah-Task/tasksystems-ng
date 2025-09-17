@@ -49,31 +49,31 @@
   flex-shrink: 0;
 }
 
-/* The directional filler effect */
 .view-all-btn::before {
   content: "";
   position: absolute;
   inset: 0;
   background: #e88504;
-  transform: translateX(100%); /* start hidden on the right */
+  transform: translateX(100%);
   transition: transform 0.4s ease;
   z-index: -1;
 }
 
 .view-all-btn:hover::before {
-  transform: translateX(0); /* fill leftwards */
+  transform: translateX(0);
 }
 
 .view-all-btn:hover {
-  color: #fff; /* text turns white on fill */
+  color: #fff; 
 }
-
 
 /* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
@@ -125,34 +125,30 @@
   width: 100%;
   background-color: #e88504;
   transform: scaleX(0);
-  transform-origin: right; /* exit from right */
+  transform-origin: right; 
   transition: transform 0.3s ease;
 }
 
-/* Hover underline grows left → right */
 .service-card:hover .read-text::after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-/* Arrow rotation */
 .read-arrow {
   transition: transform 0.5s ease, color 0.4s ease;
   color: #111;
 }
 
 .service-card:hover .read-arrow {
-  transform: rotate(-310deg); /* rotates leftwards */
+  transform: rotate(-310deg); 
   color: #e88504;
 }
 
-/* Hover text color */
 .service-card:hover .read-text {
   color: #e88504;
 }
 
 
-/* Responsive */
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -164,20 +160,17 @@
     padding: 40px 10px;
   }
 
-  /* Stack header content vertically */
   .services-header {
     flex-direction: column;
-    gap: 1rem; /* space between title and button */
+    gap: 1rem;
   }
 
-  /* Button spans full width if you want */
   .view-all-btn {
-    align-self: flex-start; /* left align */
+    align-self: flex-start;
     font-size: 0.85rem;
     padding: 8px 16px;
   }
 
-  /* Shrink text sizes */
   .services-title h2 {
     font-size: 1.5rem;
     line-height: 1.3;
@@ -192,10 +185,9 @@
     line-height: 1.4;
   }
 
-  /* Keep 2 cards per row, not 1 */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; /* tighter spacing on mobile */
+    gap: 1rem;
   }
 }
 
