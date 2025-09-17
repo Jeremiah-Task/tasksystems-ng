@@ -7,6 +7,11 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const services = [
   {
+    img: "/solutions.jpg",
+    title: "Product-Driven Solutions",
+    desc: "Design and deliver innovative, solutions addressing business challenges, ensuring scalability, security, and long-term value.",
+  },
+  {
     img: "/infrastructure.jpg",
     title: "Enterprise Infrastructure",
     desc: "Designing and implementing scalable servers, storage, and network solutions for businesses.",
