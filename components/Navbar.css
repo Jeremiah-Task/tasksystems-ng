@@ -29,18 +29,40 @@
 
 .nav-links {
   display: flex;
-  gap: 0.2rem;
+  gap: 1rem; /* restore comfortable spacing */
 }
 
 .nav-links a {
+  position: relative;
   color: #000;
   text-decoration: none;
   font-size: 0.8rem;
   transition: color 0.3s ease;
+  padding: 0.3rem 0; /* vertical padding only */
+  display: inline-block; /* helps with ::after sizing */
+}
+
+/* underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #e88504;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-links a:hover {
-  color: #fabb0c;
+  color: #e88504;
 }
 
 .hamburger {

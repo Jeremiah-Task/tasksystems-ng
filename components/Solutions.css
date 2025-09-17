@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
+
 .solutions {
   margin-top: -8rem; /* overlap into hero */
   position: relative;
@@ -11,7 +13,6 @@
   gap: 2rem;
 }
 
-
 .solution-card {
   background: #fff; /* keep cards white */
   border-radius: 0 16px 0 16px;
@@ -19,25 +20,27 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   text-align: left;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.solution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .solution-number {
   position: absolute;
-  top: -20px;
+  top: -45px;
   left: 20px;
   background: #f5f6fb;
-  color: #6a6fcf;
-  font-weight: bold;
-  font-size: 1rem;
+  color: #f5e68c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
   padding: 0.6rem 1rem;
   border-radius: 50px;
   border: 1px solid #e5e6ef;
+  transition: all 0.4s ease;
+}
+
+.solution-card:hover .solution-number {
+  top: -50px;
+  background-color: #e88504;
 }
 
 .solution-card h3 {
@@ -59,9 +62,45 @@
   font-weight: 500;
   color: #111;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
 }
 
-.read-more:hover {
-  text-decoration: underline;
+/* Directional underline (hidden by default) */
+.read-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #e88504;
+  transform: scaleX(0);
+  transform-origin: right; /* exit from right */
+  transition: transform 0.3s ease;
 }
+
+/* Hover underline grows left → right */
+.solution-card:hover .read-text::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Arrow rotation */
+.read-arrow {
+  transition: transform 0.5s ease, color 0.4s ease;
+  color: #111;
+}
+
+.solution-card:hover .read-arrow {
+  transform: rotate(-310deg); /* rotates leftwards */
+  color: #e88504;
+}
+
+/* Hover text color */
+.solution-card:hover .read-text {
+  color: #e88504;
+}
+

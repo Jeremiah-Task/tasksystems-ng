@@ -1,119 +1,196 @@
-/* components/Footer.module.css */
 .footer {
-  background-color: #f8f9fa;
-  padding: 40px 0;
+  background-color: #e88504;
+  padding: 40px 20px;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: white;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-.contactSection, .newsletterSection {
-  text-align: center;
-  margin-bottom: 30px;
+/* Top row: Call + Newsletter */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Contact section */
+.contactSection {
+  display: flex;
+  align-items: center; /* align icon with text */
+  gap: 15px; /* spacing between text and icon */
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  color: #e88504;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .sectionTitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
-  color: #2c3e50;
+  margin-bottom: 5px;
 }
 
 .phoneNumber {
-  font-size: 20px;
-  color: #555;
+  font-size: 18px;
+}
+
+/* Newsletter section */
+.newsletterSection {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between title and input */
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.newsletterSection .sectionTitle {
+  margin: 0; /* remove extra bottom margin */
+}
+
+.newsletterInputWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 }
 
 .emailInput {
-  padding: 10px 15px;
-  width: 300px;
-  max-width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  flex: 1;
+  padding: 30px 10px;
+  border-radius: 6px;
+  border: none;
   font-size: 16px;
 }
 
+.newsletterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* space between text & icon */
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  height: 80%;
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px;
+  font-weight: 600;
+  background: linear-gradient(to right, #fabb0c, #e88504);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletterBtn:hover {
+  background: linear-gradient(to right, #e88504, #fabb0c);
+}
+
+.iconCircleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #e88504;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+
+/* Divider */
 .divider {
   border: none;
   height: 1px;
-  background-color: #ddd;
+  background-color: rgba(255,255,255,0.3);
   margin: 30px 0;
 }
 
+/* Footer content grid */
+/* Footer content grid - now 3 equal sections */
 .footerContent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 30px;
 }
 
-.footerSection {
-  padding: 0 15px;
-}
-
-.brandName {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #2c3e50;
-}
-
-.description {
+/* Contact info spacing */
+.contactInfo p {
+  margin-bottom: 10px;
   line-height: 1.6;
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #2c3e50;
+/* Footer sections */
+.footerSection h3,
+.footerSection h4 {
+  color: white;
 }
 
-.contactInfo {
-  line-height: 1.6;
-  color: #666;
+.footer-description,
+.contactInfo,
+.linkList li {
+  color: rgba(255, 255, 255, 0.9);
 }
 
+/* Quick Links - remove bullets */
 .linkList {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .linkList li {
-  margin-bottom: 10px;
-  color: #666;
   cursor: pointer;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .linkList li:hover {
-  color: #2c3e50;
+  color: #fff;
 }
 
+/* Copyright */
 .copyright {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #ddd;
-  color: #666;
+  border-top: 1px solid rgba(255,255,255,0.3);
 }
 
-.copyright strong {
-  color: #2c3e50;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .footerContent {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .topRow {
+    flex-direction: column;
+    align-items: flex-start;
   }
   
-  .emailInput {
+  .newsletterSection {
+    align-items: flex-start;
+  }
+
+  .newsletterInputWrapper {
     width: 100%;
   }
 }

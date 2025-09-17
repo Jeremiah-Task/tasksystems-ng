@@ -3,7 +3,6 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Solutions from "@/components/Solutions";
 import Team from "@/components/Team";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Why from "@/components/Why";
@@ -19,7 +18,6 @@ export default function Page() {
         <Services />
         <Why />
         <Team />
-        <Contact />
       </main>
       <Footer />
     </div>

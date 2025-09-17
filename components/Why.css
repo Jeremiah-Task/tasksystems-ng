@@ -22,7 +22,7 @@
 }
 
 .title {
-  color: #ff6600;
+  color: #e88504;
   font-weight: 600;
   margin-bottom: 10px;
   display: block;
@@ -55,7 +55,7 @@
 }
 
 .checkIcon {
-  color: purple; /* 🔑 make it purple */
+  color: #e88504; /* 🔑 make it purple */
   font-size: 20px;
   margin-right: 10px;
 }
@@ -65,18 +65,33 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #2563eb;
-  color: #fff;
   padding: 12px 28px;
+  border: none;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(to right, #fabb0c, #e88504);
+  transition: all 0.3s ease;
   width: max-content;
+  z-index: 0;
 }
 
-.cta:hover {
-  background: #1d4ed8;
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #e88504, #fabb0c);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.cta:hover::before {
+  opacity: 1;
 }
 
 .ctaIconWrapper {
@@ -90,7 +105,7 @@
 }
 
 .ctaIcon {
-  color: #2563eb; /* same as button background */
+  color: #e88504; /* same as button background */
   font-size: 10px;
 }
 

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import "./Services.css";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const services = [
   {
@@ -55,13 +56,14 @@ const Services = () => {
                 src={service.img}
                 alt={service.title}
                 fill
-                style={{ objectFit: "cover", borderRadius: "12px" }}
+                style={{ objectFit: "cover" }}
               />
             </div>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
             <a href={service.link} className="read-more">
-              Read More ↗
+              <span className="read-text">Read More</span>
+              <FiArrowUpRight className="read-arrow" />
             </a>
           </div>
         ))}

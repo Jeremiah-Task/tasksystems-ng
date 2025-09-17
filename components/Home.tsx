@@ -18,16 +18,17 @@ const Home = () => {
 
       <div className="container">
         <div className="hero-text-container">
-          <p className="cyber-hygiene">Cyber Hygiene:</p>
-          <h1>A Proactive Approach to Digital Security.</h1>
+          <p className="cyber-hygiene">Task Systems Limited</p>
+          <h1>Innovative IT Solutions for Your Business</h1>
           <p className="description">
             In today's increasingly digital world, cybersecurity has become
             paramount. With the rapid expansion of online activities, the threat
             landscape...
           </p>
           <div className="hero-buttons">
-            <button className="btn-request-demo">Request A Demo</button>
-            <button className="btn-watch-video">Watch Intro Video</button>
+            <button className="btn-request-demo">
+              <span className="btn-circle"></span>About Us</button>
+            <button className="btn-watch-video">Our Services</button>
           </div>
         </div>
       </div>

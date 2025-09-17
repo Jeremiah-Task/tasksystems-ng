@@ -1,6 +1,11 @@
+.about-section {
+  padding: 5rem 2rem; /* proper spacing all around */
+  background: #f9f9f9;
+}
+
 .about-container {
   max-width: 1200px;
-  margin: 1.5rem auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -20,7 +25,7 @@
 }
 
 .about-heading .section-label {
-  color: #ff6600;
+  color: #e88504;
   font-weight: 600;
   margin-bottom: 8px;
   display: block;
@@ -35,31 +40,32 @@
 /* Main Image */
 .main-image {
   position: relative;
-  width: 100%;
-  height: 60%; /* 60% of container height */
-  min-height: 350px;
-}
-
-.main-image {
-  width: 70%;
+  width: 80%;
+  min-height: 500px; /* taller to elongate */
   height: 100%;
-  object-fit: cover;
-  border-radius: 0 10px 0 10px; /* flat TL & BR */
+  border-radius: 0 30px 0 30px;
   display: block;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Small Image 1 */
 .small-image {
   position: absolute;
-  top: 40%;
-  right: 0%;
-  width: 180px;
-  height: 140px;
-  border-radius: 0 10px 0 10px; /* flat TL & BR */
+  top: 30%;
+  right: -5%;
+  width: 160px;
+  height: 160px;
+  border-radius: 0 30px 0 30px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  border: 10px solid #f9f9f9;
 }
 
 .small-image img {
@@ -71,13 +77,13 @@
 /* Small Image 2 (circle overlap) */
 .small-image-circle {
   position: absolute;
-  bottom: -40px;
-  right: -30px;
-  width: 160px;
-  height: 160px;
+  bottom: -20px;
+  right: 0;
+  width: 310px;
+  height: 310px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #fff;
+  border: 10px solid #f9f9f9;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   z-index: 3;
 }
@@ -91,10 +97,117 @@
 /* Right Column */
 .about-text {
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-description {
   color: #555;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* more spacing from features */
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px; /* spacing between each row */
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between icon and text */
+}
+
+.feature-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: 0.5px solid rgba(232, 133, 4, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 2rem;
+  transition: all 0.4s ease;
+  box-shadow: none;
+}
+
+/* Hover effect */
+.feature-item:hover .feature-icon {
+  color: #e88504;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Feature text */
+.feature-item h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  color: #111;
+  line-height: 1.4;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* CTA Button (Home About Us style) */
+.cta-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, #fabb0c, #e88504);
+  color: white;
+  text-decoration: none;
+  z-index: 0;
+  margin-top: 40px; /* well spaced from content */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #e88504, #fabb0c);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+}
+
+.cta-button span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e88504;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover span {
+  background: #fabb0c;
 }
