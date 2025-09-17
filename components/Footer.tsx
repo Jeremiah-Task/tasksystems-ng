@@ -54,7 +54,6 @@ const Footer = () => {
               <p><strong>Port Harcourt:</strong> 146 Trans Amadi Industrial Layout, Port Harcourt, Rivers State.</p>
               <p><strong>Abuja:</strong> 20 Port Harcourt Crescent, off Gimbiya Street, Area 11 Garki District, Abuja.</p>
               <p><strong>Email:</strong> engage@tasksystems.com</p>
-              <p><strong>Phone:</strong> +234 911 080 8619</p>
             </div>
           </div>
 

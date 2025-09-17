@@ -23,9 +23,9 @@ const Team = () => {
   return (
     <div id="team" className="section team">
       <div className="container">
-        <h2>Directors and Management</h2>
+        {/* Removed <h2>Directors and Management</h2> */}
 
-        <h3>Directors</h3>
+        <h2>Directors</h2>
         <div className="team-grid">
           {directors.map((person) => (
             <div key={person.name} className="profile-card">
@@ -35,14 +35,14 @@ const Team = () => {
                 width={250}
                 height={400}
                 className="profile-img"
-              />ı
+              />
               <h4>{person.name}</h4>
               <p>{person.title}</p>
             </div>
           ))}
         </div>
 
-        <h3 style={{ marginTop: "4rem" }}>Management</h3>
+        <h2 style={{ marginTop: "4rem" }}>Management</h2>
         <div className="team-grid">
           {management.map((person) => (
             <div key={person.name} className="profile-card">

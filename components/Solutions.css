@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap");
 
 .solutions {
   margin-top: -8rem; /* overlap into hero */
@@ -28,8 +28,8 @@
   top: -45px;
   left: 20px;
   background: #f5f6fb;
-  color: #f5e68c;
-  font-family: 'Poppins', sans-serif;
+  color: #e88504;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-size: 2rem;
   padding: 0.6rem 1rem;
@@ -41,6 +41,7 @@
 .solution-card:hover .solution-number {
   top: -50px;
   background-color: #e88504;
+  color: #f5e68c;
 }
 
 .solution-card h3 {
@@ -70,7 +71,7 @@
 
 /* Directional underline (hidden by default) */
 .read-text::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -105,7 +106,69 @@
 }
 
 @media (max-width: 767px) {
+  .solutions {
+    margin-top: -8rem; /* less overlap on mobile */
+    padding: 40px 20px;
+  }
+
   .solutions-grid {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .solution-card {
+    padding: 1.2rem 1rem;
+    position: relative;
+  }
+
+  .solution-number {
+    position: static;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
+  .solution-card h3 {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .solution-card p {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.85rem;
+  }
+
+  .read-more {
+    font-size: 0.8rem;
+  }
+}
+
+/* extra small devices */
+@media (max-width: 500px) {
+  .solution-card {
+    padding: 1rem;
+  }
+
+  .solution-number {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .solution-card h3 {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  .solution-card p {
+    font-size: 0.8rem;
+    margin: 0.4rem 0 0.8rem;
+  }
+
+  .read-more {
+    font-size: 0.75rem;
+  }
+
+  .solutions-grid {
+    gap: 1rem;
   }
 }
