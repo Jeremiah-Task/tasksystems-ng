@@ -12,37 +12,37 @@ export default function Why() {
                 <div className="whyText">
                     <p className="title">Why Choose Us?</p>
                     <p className="tagline">
-                        <strong>Digital Vigilance: Strengthening Cyber Defenses in the Modern.</strong>
+                        <strong>Empowering Businesses Through Trusted ICT Solutions</strong>
                     </p>
 
                     <ul className="list">
                         <li>
                             <IoCheckmarkDoneSharp className="checkIcon" />
-                            Vulnerability Assessment and Penetration Testing
+                            {`Proven expertise in ICT solutions`}
                         </li>
                         <li>
                             <IoCheckmarkDoneSharp className="checkIcon" />
-                            Identity and Access Management (IAM)
+                            {`Trusted partnerships with global leaders`}
                         </li>
                         <li>
                             <IoCheckmarkDoneSharp className="checkIcon" />
-                            Security Information and Event Management
+                            {`End-to-end ICT service delivery`}
                         </li>
                         <li>
                             <IoCheckmarkDoneSharp className="checkIcon" />
-                            Security Auditing and Compliance
+                            {`Quality assurance with ISO standards`}
                         </li>
                         <li>
                             <IoCheckmarkDoneSharp className="checkIcon" />
-                            This service involves responding to security
+                            {`Local commitment to talent growth`}
                         </li>
                     </ul>
 
-                    <a href="#learn-more" className="cta">
+                    <a href="#services" className="cta">
                         <span className="ctaIconWrapper">
                             <FaArrowRight className="ctaIcon" />
                         </span>
-                        Learn More
+                        Explore Services
                     </a>
                 </div>
 

@@ -5,10 +5,11 @@ import { useInView } from "react-intersection-observer";
 import { FiArrowUpRight } from "react-icons/fi"; // arrow icon
 
 const solutions = [
-  { name: "Security Management", details: "The Imperative of Cybersecurity in an Interconnected World." },
-  { name: "Data Privacy", details: "The Imperative of Cybersecurity in an Interconnected World." },
-  { name: "Network Security", details: "The Imperative of Cybersecurity in an Interconnected World." },
-  { name: "DDOS Protection", details: "The Imperative of Cybersecurity in an Interconnected World." },
+  { name: "Enterprise Infrastructure & Cloud", details: "Building scalable systems with reliable servers, storage, and cloud solutions." },
+  { name: "Cybersecurity & Data Protection", details: "Protecting businesses with secure, compliant, and resilient IT systems." },
+  { name: "Managed IT Support", details: "Delivering responsive support and maintenance to keep operations running smoothly." },
+  { name: "Power & Security Systems", details: "Ensuring business continuity with stable power and advanced security solutions." },
+
 ];
 
 const Solutions = () => {
@@ -29,8 +30,8 @@ const Solutions = () => {
               </div>
               <h3>{solution.name}</h3>
               <p>{solution.details}</p>
-              <a href="#" className="read-more">
-                <span className="read-text">Read More</span>
+              <a href="#services" className="read-more">
+                <span className="read-text">More Solutions</span>
                 <FiArrowUpRight className="read-arrow" />
               </a>
             </div>

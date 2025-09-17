@@ -1,5 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaLocationArrow } from "react-icons/fa"; // import arrow
+import { FaLocationArrow } from "react-icons/fa";
+import Image from "next/image";
 import "./Footer.css";
 
 const Footer = () => {
@@ -40,14 +41,13 @@ const Footer = () => {
 
         <div className="footerContent">
           <div className="footerSection">
-            <h3 className="brandName">Pahell</h3>
+            <Image src="/logo.png" alt="Logo" width={100} height={70} />
             <p className="footer-description">
-              Cybersecurity is crucial in today&apos;s digital age, where many individuals
-              and organizations store a significant amount of sensitive data on computers...
+             Task Systems Limited delivers trusted ICT solutions that empower businesses to stay secure, connected, and future-ready.
             </p>
           </div>
 
-          <div className="footerSection">
+          <div id="contact" className="footerSection">
             <h4 className="subtitle">Contact Us</h4>
             <div className="contactInfo">
               <p><strong>Lagos:</strong> Yudala Heights Building, 13 Idowu Martins Street, Victoria Island, Lagos.</p>
@@ -60,17 +60,17 @@ const Footer = () => {
           <div className="footerSection">
             <h4 className="subtitle">Quick Links</h4>
             <ul className="linkList">
-              <li>About</li>
-              <li>Services</li>
-              <li>Testimonial</li>
-              <li>Our Blog</li>
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#why">Why Us</a></li>
+              <li><a href="#team">Team</a></li>
             </ul>
           </div>
         </div>
 
-
         <div className="copyright">
-          <p>Copyright © 2024 <strong>Pahell</strong>, All Rights Reserved</p>
+          <p>Copyright © 2024 <strong>Task Systems</strong>, All Rights Reserved</p>
         </div>
       </div>
     </footer>

@@ -8,27 +8,28 @@ import { FiArrowUpRight } from "react-icons/fi";
 const services = [
   {
     img: "/contact.png",
-    title: "Application Security",
-    desc: "The Imperative of Cybersecurity in an Interconnected World.",
-    link: "#",
+    title: "Enterprise Infrastructure",
+    desc: "Designing and implementing scalable servers, storage, and network solutions for businesses.",
   },
   {
     img: "/contact.png",
-    title: "Infrastructure Security",
-    desc: "The Imperative of Cybersecurity in an Interconnected World.",
-    link: "#",
+    title: "Cloud Solutions",
+    desc: "Delivering cloud enablement and migration services to improve agility and efficiency.",
   },
   {
     img: "/contact.png",
-    title: "Cloud-Native Security",
-    desc: "The Imperative of Cybersecurity in an Interconnected World.",
-    link: "#",
+    title: "Cybersecurity & Risk Management",
+    desc: "Protecting systems, networks, and data through comprehensive security strategies and assessments.",
   },
   {
     img: "/contact.png",
-    title: "Network Security",
-    desc: "The Imperative of Cybersecurity in an Interconnected World.",
-    link: "#",
+    title: "Managed IT Support",
+    desc: "Providing helpdesk, maintenance, and IT outsourcing services to ensure business continuity.",
+  },
+  {
+    img: "/contact.png",
+    title: "Power & Security Systems",
+    desc: "Ensuring uninterrupted operations with backup power, access control, and surveillance solutions.",
   },
 ];
 
@@ -39,12 +40,12 @@ const Services = () => {
         <div className="services-title">
           <p className="section-label">Our Services</p>
           <h2>
-            What We Do for Your (SIEM) <br />
-            Security in Paheli.
+            What We Deliver for You<br />
+            Technology in Action.
           </h2>
         </div>
         <a href="#all-services" className="view-all-btn">
-          <span className="dot"></span> View All Services
+          <span className="dot"></span> View Other Services
         </a>
       </div>
 
@@ -61,8 +62,8 @@ const Services = () => {
             </div>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
-            <a href={service.link} className="read-more">
-              <span className="read-text">Read More</span>
+            <a href="#solutions" className="read-more">
+              <span className="read-text">More Services</span>
               <FiArrowUpRight className="read-arrow" />
             </a>
           </div>

@@ -8,23 +8,23 @@ import "./About.css";
 const features = [
   {
     icon: <FaUsers />,
-    title: "Highly Professional Members",
-    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+    title: "Proven Expertise & Experience",
+    desc: "Task Systems has over three decades of experience delivering ICT solutions to leading businesses across Nigeria.",
   },
   {
     icon: <FaLaptopCode />,
-    title: "Infrastructure Integration Technology",
-    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+    title: "Infrastructure & Cloud Integration",
+    desc: "We design and implement scalable infrastructure and cloud solutions that optimize business operations and technology adoption.",
   },
   {
     icon: <FaShieldAlt />,
-    title: "Vulnerability Assessment & Penetration Testing",
-    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+    title: "Cybersecurity & Risk Management",
+    desc: "We protect critical systems and data through comprehensive cybersecurity strategies, vulnerability assessments, and penetration testing.",
   },
   {
     icon: <FaExclamationTriangle />,
-    title: "Security Information & Event Management",
-    desc: "Organizations are now forced to implement comprehensive cyber security strategies to protect their systems,",
+    title: "Managed IT & Compliance Services",
+    desc: "Our managed IT services, security monitoring, and compliance support ensure operational continuity and adherence to global standards.",
   },
 ];
 
@@ -37,7 +37,7 @@ const AboutSection = () => {
           <div className="about-heading">
             <p className="section-label">About Paheli</p>
             <h2 className="about-title">
-              The Virtual Realm: An Expansive Guide to Cybersecurity.
+              {`The Digital Frontier: Powering Nigeria’s ICT Evolution`}
             </h2>
           </div>
 
@@ -62,8 +62,7 @@ const AboutSection = () => {
         {/* Right Column */}
         <div className="about-text">
           <p className="about-description">
-            Organizations are now compelled to complete comprehensive cybersecurity
-            strategies to safeguard their systems, networks, and data...
+            {`In today’s fast-paced digital landscape, organizations rely on Task Systems Limited to deliver secure, reliable, and scalable ICT solutions. From infrastructure and cloud services to cybersecurity and managed support, we help businesses protect their systems, networks, and data while staying ahead of technology trends.`}
           </p>
 
           <div className="features-list">
@@ -81,7 +80,7 @@ const AboutSection = () => {
           </div>
 
           <a href="#contact" className="cta-button">
-            Know More About
+            Contact Us
           </a>
         </div>
       </div>
