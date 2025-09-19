@@ -28,25 +28,50 @@ jobs:
     - name: Build application
       run: npm run build
 
+    - name: Verify build output
+      run: |
+        echo "Checking build output structure:"
+        ls -la .next/
+        echo "Standalone directory:"
+        ls -la .next/standalone/ || echo "No standalone directory"
+        echo "Static directory:"
+        ls -la .next/static/ || echo "No static directory"
+
     - name: Prepare deployment package
       run: |
-        # Create deployment directory with all necessary files
+        # Create deployment directory
         mkdir -p deployment
-        cp -R .next/standalone/* deployment/
-        cp -R .next/static deployment/.next/static
-        cp -R public deployment/public 2>/dev/null || true
         
-        # Create package.json for production
+        # Copy the entire standalone output
+        cp -R .next/standalone/* deployment/
+        
+        # Copy static files if they exist (they might be inside standalone already)
+        if [ -d ".next/static" ]; then
+          mkdir -p deployment/.next/static
+          cp -R .next/static/* deployment/.next/static/
+        fi
+        
+        # Copy public files if they exist
+        if [ -d "public" ]; then
+          mkdir -p deployment/public
+          cp -R public/* deployment/public/
+        fi
+        
+        # Create minimal package.json for Azure
         cat > deployment/package.json << 'EOF'
         {
           "name": "tasksystems-ng-production",
           "version": "1.0.0",
           "scripts": {
             "start": "node server.js"
-          },
-          "dependencies": {}
+          }
         }
         EOF
+        
+        # List deployment contents for verification
+        echo "Deployment package contents:"
+        find deployment -type f -name "*.js" -o -name "*.json" | head -10
+        ls -la deployment/
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
@@ -67,6 +92,12 @@ jobs:
       with:
         name: azure-app
         path: .
+
+    - name: List deployed files for debugging
+      run: |
+        echo "Final deployment structure:"
+        ls -la
+        find . -name "server.js" -o -name "package.json" | xargs ls -la
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v3
