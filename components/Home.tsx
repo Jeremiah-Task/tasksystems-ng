@@ -26,9 +26,9 @@ const Home = () => {
             landscape...
           </p>
           <div className="hero-buttons">
-            <button className="btn-request-demo">
-              <span className="btn-circle"></span>About Us</button>
-            <button className="btn-watch-video">Our Services</button>
+            <a href="#about"><button className="btn-request-demo">
+              <span className="btn-circle"></span>About Us</button></a>
+            <a href="#services"><button className="btn-watch-video">Our Services</button></a>
           </div>
         </div>
       </div>

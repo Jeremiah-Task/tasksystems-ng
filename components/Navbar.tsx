@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="nav-logo">
-          <Image src="/logo.png" alt="Logo" width={70} height={50} />
+          <a href="#home"><Image src="/logo.png" alt="Logo" width={70} height={50} /></a>
         </div>
         <div className="nav-links-container">
           <div className={`nav-links ${isOpen ? "open" : ""}`}>

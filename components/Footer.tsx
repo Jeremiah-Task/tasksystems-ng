@@ -41,7 +41,7 @@ const Footer = () => {
 
         <div className="footerContent">
           <div className="footerSection">
-            <Image src="/logo.png" alt="Logo" width={100} height={70} />
+            <a href="#home"><Image src="/logo.png" alt="Logo" width={100} height={70} /></a>
             <p className="footer-description">
              Task Systems Limited delivers trusted ICT solutions that empower businesses to stay secure, connected, and future-ready.
             </p>

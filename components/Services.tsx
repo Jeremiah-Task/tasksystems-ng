@@ -44,7 +44,7 @@ const Services = () => {
             Technology in Action.
           </h2>
         </div>
-        <a href="#all-services" className="view-all-btn">
+        <a href="#solutions" className="view-all-btn">
           <span className="dot"></span> View Other Services
         </a>
       </div>
